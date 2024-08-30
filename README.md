@@ -1,4 +1,18 @@
-# Pandas Cheat Sheet
+<h1 align="center">Pandas Cheat Sheet</h1>
+
+## Table of Contents
+
+- [Data Structures in Pandas](#data-structures-in-pandas)
+- [Command Execution](#command-execution)
+- [Pandas Read and Write to CSV](#pandas-read-and-write-to-csv)
+- [Create Pandas Series and DataFrame](#create-pandas-series-and-dataframe)
+- [Pandas Dataframe](#pandas-dataframe)
+- [Pandas Sorting, Reindexing, Renaming, Reshaping, Dropping](#pandas-sorting-reindexing-renaming-reshaping-dropping)
+- [DataFrame Retrieving Series/DataFrame Information and Slicing](#dataframe-retrieving-seriesdataframe-information-and-slicing)
+- [Combine Two Data Sets](#combine-two-data-sets)
+- [Data Analysis](#data-analysis)
+- [Data Visualization](#data-visualization)
+- [Additional Data Wrangling](#additional-data-wrangling)
 
 ## Data Structures in Pandas
 
@@ -7,7 +21,7 @@
 | **Series**         | A one-dimensional labelled array capable of holding any data type.              |
 | **DataFrame**      | A two-dimensional tabular data structure with labelled axes (rows and columns). |
 
-### Command Execution
+## Command Execution
 
 | **Command**           | **Description**                                        |
 | --------------------- | ------------------------------------------------------ |
