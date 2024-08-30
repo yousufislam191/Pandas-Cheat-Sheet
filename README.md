@@ -1,5 +1,18 @@
 <h1 align="center">Pandas Cheat Sheet</h1>
 
+<h3 align="center"> Follow Author's Profile</h3>
+<div align="center">
+
+**[Facebook](https://facebook.com/yousufislam191)** |
+**[Linkedin](https://linkedin.com/in/yousufislam191)** |
+**[Github](https://github.com/yousufislam191)** |
+**[Instagram](https://instagram.com/yousufislam191)** |
+**[Twittwer](https://x.com/yousufislam_191)** |
+**[Kaggle](https://kaggle.com/yousufislam191)** |
+**[Website](https://yousufislam191.github.io)**
+
+</div>
+
 ## Table of Contents
 
 - [Data Structures in Pandas](#data-structures-in-pandas)
