@@ -136,13 +136,15 @@
 
 ## Data Visualization
 
-| **Action**    | **Command**                           | **Description**                          |
-| ------------- | ------------------------------------- | ---------------------------------------- |
-| **Bar Chart** | `df.plot.bar(x='FRUITS', y='PRICE')`  | Plot a bar chart of 'FRUITS' vs 'PRICE'. |
-| **Line Plot** | `df.plot.line(x='FRUITS', y='PRICE')` | Plot a line plot of 'FRUITS' vs 'PRICE'. |
-| **Histogram** | `df.plot.hist(y='PRICE', bins=20)`    | Plot a histogram of 'PRICE'.             |
-| **Box Plot**  | `df.boxplot()`                        | Plot a box plot of the DataFrame.        |
-| **Area Plot** | `df.plot.area()`                      | Plot an area chart of the DataFrame.     |
+| **Action**       | **Command**                                   | **Description**                                |
+| ---------------- | --------------------------------------------- | ---------------------------------------------- |
+| **Bar Chart**    | `df.plot.bar(x='FRUITS', y='PRICE')`          | Plot a bar chart of 'FRUITS' vs 'PRICE'.       |
+| **Line Plot**    | `df.plot.line(x='FRUITS', y='PRICE')`         | Plot a line plot of 'FRUITS' vs 'PRICE'.       |
+| **Pie Chart**    | `df.plot.pie(y='PRICE', labels=df['FRUITS'])` | Plot a pie chart of 'PRICE' for each 'FRUITS'. |
+| **Scatter Plot** | `df.plot.scatter(x='FRUITS', y='PRICE')`      | Plot a scatter plot of 'FRUITS' vs 'PRICE'.    |
+| **Histogram**    | `df.plot.hist(y='PRICE', bins=20)`            | Plot a histogram of 'PRICE'.                   |
+| **Box Plot**     | `df.boxplot()`                                | Plot a box plot of the DataFrame.              |
+| **Area Plot**    | `df.plot.area()`                              | Plot an area chart of the DataFrame.           |
 
 ## Additional Data Wrangling
 
