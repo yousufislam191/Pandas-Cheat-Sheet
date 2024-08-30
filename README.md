@@ -67,17 +67,17 @@
 
 ## Pandas Sorting, Reindexing, Renaming, Reshaping, Dropping
 
-| **Action**            | **Command**                                                                                       | **Description**                                  |
-| --------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| **Sorting by Values** | `df.sort_values('Price', ascending=True)`                                                         | Sort the values of 'Price' in ascending order.   |
-|                       | `df.sort_values('Price', ascending=False)`                                                        | Sort the values of 'Price' in descending order.  |
-| **Sorting by Index**  | `df.sort_index(ascending=False)`                                                                  | Sort the index of DataFrame in descending order. |
-| **Reindexing**        | `df.reset_index(drop=True, inplace=True)`                                                         | Reset the indexes to default.                    |
-| **Renaming**          | `df.rename(columns={'Fruits': 'FRUITS', 'Quantity': 'QUANTITY', 'Price': 'PRICE'}, inplace=True)` | Rename the column names.                         |
-| **Reshaping**         | `pd.melt(df)`                                                                                     | Gather columns into rows.                        |
-|                       | `pivot = df.pivot(columns='FRUITS', values=['PRICE', 'QUANTITY'])`                                | Create a Pivot Table.                            |
-| **Dropping**          | `df1 = df.drop(columns=['QUANTITY'], axis=1)`                                                     | Drop a column.                                   |
-|                       | `df2 = df.drop([1, 3], axis=0)`                                                                   | Drop rows.                                       |
+| **Action**            | **Command**                                                                                       | **Description**                                                                                                                                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sorting by Values** | `df.sort_values('Price', ascending=True)`                                                         | Sort the values of 'Price' in **ascending** order.                                                                                                                                                                              |
+|                       | `df.sort_values('Price', ascending=False)`                                                        | Sort the values of 'Price' in **descending** order.                                                                                                                                                                             |
+| **Sorting by Index**  | `df.sort_index(ascending=False)`                                                                  | Sort the index of DataFrame in **descending** order.                                                                                                                                                                            |
+| **Reindexing**        | `df.reset_index(drop=True, inplace=True)`                                                         | Reset the indexes to default.<ul><li>**inplace = True** --> make changes to the original data frame.</li> <li>**drop = True** --> Drop the initial indexes, if False then the previous index is assigned in a column.</li></ul> |
+| **Renaming**          | `df.rename(columns={'Fruits': 'FRUITS', 'Quantity': 'QUANTITY', 'Price': 'PRICE'}, inplace=True)` | Rename the column name with its respective values:<ul><li>In the given code ‘Fruits’ will be replaced by ‘FRUITS’, ‘Quantity’ will be replaced ‘QUANTITY’ and ‘Price’ will be replaced by ‘PRICE’</li></ul>                     |
+| **Reshaping**         | `pd.melt(df)`                                                                                     | Gather columns into rows.                                                                                                                                                                                                       |
+|                       | `pivot = df.pivot(columns='FRUITS', values=['PRICE', 'QUANTITY'])`                                | Create a Pivot Table.                                                                                                                                                                                                           |
+| **Dropping**          | `df1 = df.drop(columns=['QUANTITY'], axis=1)`                                                     | Drop a column. <ul><li> Drop the ‘QUANTITY’ from the data frame df, Here axis = 1 is for the column.</li></ul>                                                                                                                  |
+|                       | `df2 = df.drop([1, 3], axis=0)`                                                                   | Drop rows.<ul><li>Drop 2nd and 4th rows of data frame df, Here axis = 0 is for row</li></ul>                                                                                                                                    |
 
 ## DataFrame Retrieving Series/DataFrame Information and Slicing
 
@@ -102,14 +102,14 @@
 
 ## Combine Two Data Sets
 
-| **Action**               | **Command**                                                   | **Description**            |
-| ------------------------ | ------------------------------------------------------------- | -------------------------- |
-| **Merge Two DataFrames** | `pd.merge(df1, df2, how='left', on='Fruits')`                 | Left Join.                 |
-|                          | `pd.merge(df1, df2, how='right', on='Fruits')`                | Right Join.                |
-|                          | `pd.merge(df1, df2, how='inner', on='Fruits')`                | Inner Join.                |
-|                          | `pd.merge(df1, df2, how='outer', on='Fruits')`                | Outer Join.                |
-| **Concatenation**        | `concat_df = pd.concat([df, df1], axis=0, ignore_index=True)` | Row-Wise Concatenation.    |
-|                          | `concat_df = pd.concat([df, df2], axis=1)`                    | Column-Wise Concatenation. |
+| **Action**               | **Command**                                                   | **Description**                                                                                                                                                                                                                                                                                           |
+| ------------------------ | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Merge Two DataFrames** | `pd.merge(df1, df2, how='left', on='Fruits')`                 | Left Join:<br>Merge the two data frames df1 and df2 based on the ‘Fruits’ column of the left data frame i.e df1                                                                                                                                                                                           |
+|                          | `pd.merge(df1, df2, how='right', on='Fruits')`                | Right Join:<br>Merge the two data frames df1 and df2 based on the ‘Fruits’ column of the right data frame i.e df2                                                                                                                                                                                         |
+|                          | `pd.merge(df1, df2, how='inner', on='Fruits')`                | Inner Join:<br>Merge the two data frames df1 and df2 based on the common ‘Fruits’ name of both data frames.                                                                                                                                                                                               |
+|                          | `pd.merge(df1, df2, how='outer', on='Fruits')`                | Outer Join:<ul><li>Merge the two data frames df1 and df2 based on the common ‘Fruits’ name</li><li>In this case ‘Fruits’ of both data frames will be arranged accordingly</li></ul>                                                                                                                       |
+| **Concatenation**        | `concat_df = pd.concat([df, df1], axis=0, ignore_index=True)` | Row-Wise Concatenation:<ul><li>axis = 0 : denotes that the data frame df and df1 will join vertically</li><li>Ignore_index = True : ensures that the resulting DataFrame has a new index, starting from zero and incrementing sequentially</li><li>concat_df has the rows of df followed by df1</li></ul> |
+|                          | `concat_df = pd.concat([df, df2], axis=1)`                    | Column-Wise Concatenation:<ul><li>axis = 1 : denotes that the data frame df and df1 will join horizontally</li><li>concat_df has the column of df followed by df2,</li><li>If the lengths of the DataFrames don’t match, NaN values will be assigned to the missing elements.</li></ul>                   |
 
 ## Data Analysis
 
